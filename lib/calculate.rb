@@ -5,7 +5,7 @@ class Calculate
     @summ = 0
   end
 
-  def calculation(answer)
+  def counting(answer)
     case answer
     when 1
       @summ = @summ + 1

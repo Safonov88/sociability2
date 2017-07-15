@@ -5,7 +5,7 @@ class Result
     file.close
   end
 
-  def result(answer)
+  def total(answer)
     case answer
     when 0..3
       @answers[6].to_s
