@@ -1,16 +1,14 @@
 require_relative "lib/question_list.rb"
-require_relative "lib/result.rb"
-require_relative "lib/calculate.rb"
+require_relative "methods.rb"
 
-question = QuestionList.new
-calculation = Calculate.new
-result = Result.new
+questionlist = QuestionList.new("question.txt")
+amount = 0
 
-question.size.times do |i|
-  puts question.question(i)
+questionlist.size.times do |i|
+  puts questionlist.question(i)
   puts "Выберите вариант ответа:"
   puts "0 - нет, 1 - иногда, 2 - да"
-  calculation.counting(STDIN.gets.to_i)
+  amount += STDIN.gets.to_i
 end
 
-puts result.total(calculation.summ)
+puts total(amount, "result.txt")

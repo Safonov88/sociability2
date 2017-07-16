@@ -1,6 +1,6 @@
 class QuestionList
-  def initialize
-    file = File.new("question.txt", "r: UTF-8")
+  def initialize(filename)
+    file = File.new(filename, "r:UTF-8")
     @quests = file.readlines
     file.close
   end
