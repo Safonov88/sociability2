@@ -1,7 +1,7 @@
-require_relative "lib/question_list.rb"
-require_relative "methods.rb"
+require_relative "lib/question_list"
+require_relative "methods"
 
-questionlist = QuestionList.new("question.txt")
+question_list = QuestionList.new("question.txt")
 amount = 0
 
 questionlist.size.times do |i|
